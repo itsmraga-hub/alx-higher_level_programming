@@ -4,6 +4,6 @@ def print_last_digit(num):
         last = num % 10
     else:
         last = num % -10
-	last *= -1
+        last *= -1
     print("{:d}".format(last), end='')
     return (last)
