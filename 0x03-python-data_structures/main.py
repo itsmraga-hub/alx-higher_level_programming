@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-print_matrix_integer = __import__('6-print_matrix_integer').print_matrix_integer
+divisible_by_2 = __import__('10-divisible_by_2').divisible_by_2
 
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+my_list = [0, 1, 2, 3, 4, 5, 6]
+list_result = divisible_by_2(my_list)
 
-print_matrix_integer(matrix)
-print("--")
-print_matrix_integer()
+i = 0
+while i < len(list_result):
+    print("{:d} {:s} divisible by 2".format(my_list[i], "is" if list_result[i] else "is not"))
+    i += 1
+
