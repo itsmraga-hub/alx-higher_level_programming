@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 class Square:
-    """class defining a square"""
+    """class defining a square
+    """
     def __init__(self, size=0):
-        """ Method to initialize"""
+        """ Method to initialize
+	"""
 
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -12,18 +14,21 @@ class Square:
             self.__size = size
 
     def area(self):
-        """class method returning square area"""
+        """class method returning square area
+	"""
 
         return (self.__size ** 2)
 
     @property
     def size(self):
-        """class method returning size"""
+        """class method returning size
+	"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """class method to set the size"""
+        """class method to set the size
+	"""
 
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
