@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-if (process.argv.length < 3) {
+if (process.argv[2] === undefined) {
   console.log('Missing size');
 } else {
   const num = parseInt(process.argv[2]);
@@ -8,7 +8,7 @@ if (process.argv.length < 3) {
     for (let i = 0; i < num; i++) {
       let line = '';
       for (let i = 0; i < num; i++) {
-        line += 'x';
+        line += 'X';
       }
       console.log(line);
     }
