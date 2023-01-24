@@ -1,9 +1,17 @@
 #!/usr/bin/python3
 class Square:
     """class defining a square
+
+    If the class has public attributes, they may be documented here
+    in an ``Attributes`` section and follow the same formatting as a
+    function's ``Args`` section. Alternatively, attributes may be documented
+    inline with the attribute's declaration (see __init__ method below).
+
+    Properties created with the ``@property`` decorator should be documented
+    in the property's getter method.
     """
     def __init__(self, size=0):
-        """ Method to initialize
+        """ Method to initialize class Square
         """
 
         if not isinstance(size, int):
@@ -14,20 +22,20 @@ class Square:
             self.__size = size
 
     def area(self):
-        """class method returning square area
+        """class method returning square area of square
         """
 
         return (self.__size ** 2)
 
     @property
     def size(self):
-        """class method returning size
+        """class method returning size of square
         """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """class method to set the size
+        """class method to set the size - setter method
         """
 
         if not isinstance(value, int):
