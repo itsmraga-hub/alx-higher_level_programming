@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This module is of a function that divides the numbers of a matrix
+This module is of a function that divides the numbers of a
+matrix and returns the new matrix
 """
 
 
