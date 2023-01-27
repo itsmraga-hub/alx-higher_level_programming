@@ -67,6 +67,6 @@ Adding two float numbers
     >>> add_integer(2.9, 2.9)
     4
 
-Subtracting 98 and 1
+Subtracting 98 and -1
     >>> add_integer(-1)
     97
