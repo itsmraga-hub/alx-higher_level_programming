@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This module is of a function that adds two numbers
+This module is a function that adds two numbers and
+returns the result
 """
 
 
