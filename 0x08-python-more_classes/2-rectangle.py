@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 """
-This module is of a class defining a Rectangle
+  This module is of a class defining a Rectangle
 """
+
+
 class Rectangle:
-    """ Class defining a rectangle """
+    """ Class defining a rectangle with height and width setters and area
+    and perimeter methods"""
     def __init__(self, width=0, height=0):
         """ Method initializng an instance
         Args:
@@ -62,7 +65,6 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
 
     def area(self):
         """ Method calculating the Rectangle area
