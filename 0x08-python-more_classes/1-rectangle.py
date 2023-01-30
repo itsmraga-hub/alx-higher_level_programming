@@ -2,8 +2,10 @@
 """
 This module is of a class defining a Rectangle
 """
+
+
 class Rectangle:
-    """ Class defining a rectangle """
+    """ Class defining a rectangle and width and height setters"""
     def __init__(self, width=0, height=0):
         """ Method initializng an instance
         Args:
