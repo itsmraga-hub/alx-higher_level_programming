@@ -16,7 +16,7 @@ if __name__ == "__main__":
                database=sys.argv[3],
             )
     cursor = conn.cursor()
-    sql = """SELECT * FROM `states` WHERE name = '{}'"""
+    sql = """SELECT * FROM `states` WHERE BINARY `name` = '{}'"""
     cursor.execute(sql.format(sys.argv[4]))
     states = cursor.fetchall()
     for state in states:
