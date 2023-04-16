@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-import MySQLdb
-import sys
 
 """
     A script that takes in an argument and displays all
     values in the states table of hbtn_0e_0_usa
     where name matches the argument.
 """
+
+import MySQLdb
+import sys
 
 if __name__ == "__main__":
     conn = MySQLdb.connect(
@@ -22,4 +23,3 @@ if __name__ == "__main__":
     states = cursor.fetchall()
     for state in states:
         print(state)
-    conn.close()

@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-import MySQLdb
-import sys
 
 """
     A script that takes in arguments and displays all values
@@ -8,6 +6,9 @@ import sys
     the argument. But this time, write one that is safe
     from MySQL injections!
 """
+
+import MySQLdb
+import sys
 
 if __name__ == "__main__":
     conn = MySQLdb.connect(
@@ -18,7 +19,7 @@ if __name__ == "__main__":
                port=3306
             )
     cursor = conn.cursor()
-    sql = """SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC"""
+    sql = """SELECT * FROM `states` WHERE name LIKE %s ORDER BY id ASC"""
     cursor.execute(sql, (sys.argv[4], ))
     states = cursor.fetchall()
     for state in states:
