@@ -13,7 +13,7 @@ if __name__ == "__main__":
     else:
         data = {'q': ''}
 
-    res = requests.get('http://0.0.0.0:5000/search_user')
+    res = requests.post('http://0.0.0.0:5000/search_user', data=data)
 
     try:
         res = res.json()
