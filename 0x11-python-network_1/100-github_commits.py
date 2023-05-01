@@ -13,8 +13,8 @@ if __name__ == "__main__":
 
     r = requests.get('https://api.github.com/repos/{}/{}/commits'.format(
         name, repo))
-    commits = r.json()[-11:]
-    
+    commits = r.json()
     for i in range(1, 11):
         print("{}: {}".format(
-            commits[i]['sha'], commits[i]['commit']['author']['name']))
+            commits[i].get('sha'),
+            commits[i].get('commit').get('author').get('name')))
