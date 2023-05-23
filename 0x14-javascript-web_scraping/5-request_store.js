@@ -14,9 +14,9 @@ try {
       console.log('error:', err);
     } else {
       fs.writeFile(file, body, err => {
-	if (err) {
+        if (err) {
           console.log(err);
-	}
+        }
       });
     }
   });
