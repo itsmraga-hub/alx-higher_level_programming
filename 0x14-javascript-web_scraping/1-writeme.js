@@ -7,10 +7,10 @@ const content = process.argv[3];
 
 try {
   fs.writeFile(filename, content, err => {
-  if (err) {
-    console.log(err);
-	 }
+    if (err) {
+      console.log(err);
+    }
   });
-} catch(e) {
+} catch (e) {
   console.log(e);
 }
