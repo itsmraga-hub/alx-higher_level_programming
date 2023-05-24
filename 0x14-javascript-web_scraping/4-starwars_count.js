@@ -16,6 +16,6 @@ try {
       console.log(filteredMovies.length);
     }
   });
-} catch(e) {
+} catch (e) {
   console.log(e);
 }
