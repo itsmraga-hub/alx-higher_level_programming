@@ -4,14 +4,18 @@
 const request = require('request');
 const url = process.argv[2];
 
-request(url, function (err, res, body) {
-  if (err) {
-    console.log(err);
-  } else {
-    const allMovies = JSON.parse(body).results;
-    const filteredMovies = allMovies.filter((movie) =>
-      movie.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')
-    );
-    console.log(filteredMovies.length);
-  }
-});
+try {
+  request(url, function (err, res, body) {
+    if (err) {
+      console.log(err);
+    } else {
+      const allMovies = JSON.parse(body).results;
+      const filteredMovies = allMovies.filter((movie) =>
+        movie.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')
+      );
+      console.log(filteredMovies.length);
+    }
+  });
+} catch(e) {
+  console.log(e);
+}
